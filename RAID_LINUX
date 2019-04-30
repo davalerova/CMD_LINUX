@@ -1,4 +1,4 @@
-1  fdisk -l
+    1  fdisk -l
     2  mdadm
     3  mdadm --zero-superlock 
     4  fdisk -l

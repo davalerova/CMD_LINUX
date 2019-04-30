@@ -1,0 +1,14 @@
+1  fdisk -l
+    2  mdadm
+    3  mdadm --zero-superlock 
+    4  fdisk -l
+    5  mdadm --zero-superlock /dev/sdb /dev/sdc
+    6  mdadm --zero-superblock /dev/sdb /dev/sdc
+    7  fdisk -l
+    8  mdadm -C /dev/md0 -l raid0 -n 2 /dev/sd[b-c]
+    9  fdisk -l
+   10  mdadm --qwery --datail /dev/md0
+   11  mdadm --query --datail /dev/md0
+   12  mdadm --query --detail /dev/md0
+   13  mdadm --create /dev/md1 --level=1 --raid-devices=2 /dev/sdd /dev/sde
+   14  mdadm --query --detail /dev/md1
